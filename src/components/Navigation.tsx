@@ -25,7 +25,7 @@ const Navigation = () => {
           <div className="flex items-center space-x-3">
             <Link to="/" className="flex items-center space-x-3">
               <img 
-                src="/lovable-uploads/52e7460b-da4a-441b-8a22-1465ba1de76f.png" 
+                src="/lovable-uploads/8b09d9e1-7de8-4b1d-85cf-6ac72229eb95.png" 
                 alt="R.E.S.T Logo" 
                 className="w-12 h-12 object-contain"
               />
@@ -52,12 +52,8 @@ const Navigation = () => {
               </Link>
             ))}
             <Link 
-              to="#" 
-              className="px-6 py-2 bg-white text-[#0a192f] rounded-full text-lg font-medium hover:bg-gray-200 transition-colors duration-200 ml-4"
-              onClick={(e) => {
-                e.preventDefault();
-                (document.getElementById('membership-dialog') as HTMLDialogElement)?.showModal();
-              }}
+              to="/membership" 
+              className={`px-6 py-2 bg-white text-[#0a192f] rounded-full text-lg font-medium hover:bg-gray-200 transition-colors duration-200 ml-4 ${isActive("/membership") ? "bg-gray-200" : ""}`}
             >
               Membership
             </Link>
@@ -93,13 +89,9 @@ const Navigation = () => {
                 </Link>
               ))}
               <Link 
-                to="#" 
-                className="px-4 py-3 bg-white text-[#0a192f] rounded-full text-lg font-medium hover:bg-gray-200 transition-colors duration-200 mt-2 text-left"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setIsMenuOpen(false);
-                  (document.getElementById('membership-dialog') as HTMLDialogElement)?.showModal();
-                }}
+                to="/membership"
+                className={`px-4 py-3 bg-white text-[#0a192f] rounded-full text-lg font-medium hover:bg-gray-200 transition-colors duration-200 mt-2 text-left ${isActive("/membership") ? "bg-gray-200" : ""}`}
+                onClick={() => setIsMenuOpen(false)}
               >
                 Membership
               </Link>

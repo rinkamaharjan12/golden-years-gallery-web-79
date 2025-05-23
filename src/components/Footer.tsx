@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
               <img 
-                src="/lovable-uploads/52e7460b-da4a-441b-8a22-1465ba1de76f.png" 
+                src="/lovable-uploads/8b09d9e1-7de8-4b1d-85cf-6ac72229eb95.png" 
                 alt="R.E.S.T Logo" 
                 className="w-12 h-12 object-contain bg-white rounded-full p-1"
               />
@@ -37,16 +37,12 @@ const Footer = () => {
               <li><Link to="/gallery" className="text-gray-300 hover:text-white text-lg transition-colors">Gallery</Link></li>
               <li><Link to="/contact" className="text-gray-300 hover:text-white text-lg transition-colors">Contact</Link></li>
               <li>
-                <a 
-                  href="#" 
+                <Link 
+                  to="/membership"
                   className="text-gray-300 hover:text-white text-lg transition-colors"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    (document.getElementById('membership-dialog') as HTMLDialogElement)?.showModal();
-                  }}
                 >
                   Membership
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
