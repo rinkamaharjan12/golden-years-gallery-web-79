@@ -1,7 +1,9 @@
+
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight, X, Calendar } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
@@ -274,8 +276,13 @@ const Gallery = () => {
           <p className="text-xl leading-relaxed mb-8">
             Do you have photos from our events that you'd like to share? We'd love to add them to our gallery!
           </p>
-          <Button size="lg" variant="secondary" className="text-lg px-8 py-3">
-            Submit Photos
+          <Button 
+            size="lg" 
+            variant="secondary" 
+            className="text-lg px-8 py-3"
+            asChild
+          >
+            <Link to="/submit-photos">Submit Photos</Link>
           </Button>
         </div>
       </section>
