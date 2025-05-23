@@ -18,22 +18,22 @@ const Navigation = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="bg-gray-900 shadow-lg sticky top-0 z-50">
+    <nav className="bg-[#0a192f] shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+            <Link to="/" className="flex items-center space-x-3">
               <img 
-                src="/lovable-uploads/262f59f7-1be5-473f-a93b-d8236ff474b9.png" 
+                src="/lovable-uploads/52e7460b-da4a-441b-8a22-1465ba1de76f.png" 
                 alt="R.E.S.T Logo" 
-                className="w-10 h-10 object-contain"
+                className="w-12 h-12 object-contain"
               />
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold text-white">R.E.S.T</h1>
-              <p className="text-sm text-gray-300">Central Office</p>
-            </div>
+              <div>
+                <h1 className="text-2xl font-bold text-white">R.E.S.T</h1>
+                <p className="text-sm text-gray-300">Central Office</p>
+              </div>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -51,9 +51,16 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <button className="px-6 py-2 bg-primary text-white rounded-lg text-lg font-medium hover:bg-primary/80 transition-colors duration-200 ml-4">
+            <Link 
+              to="#" 
+              className="px-6 py-2 bg-white text-[#0a192f] rounded-full text-lg font-medium hover:bg-gray-200 transition-colors duration-200 ml-4"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('membership-dialog')?.showModal();
+              }}
+            >
               Membership
-            </button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -85,9 +92,17 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
-              <button className="px-4 py-3 bg-primary text-white rounded-lg text-lg font-medium hover:bg-primary/80 transition-colors duration-200 mt-2 text-left">
+              <Link 
+                to="#" 
+                className="px-4 py-3 bg-white text-[#0a192f] rounded-full text-lg font-medium hover:bg-gray-200 transition-colors duration-200 mt-2 text-left"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMenuOpen(false);
+                  document.getElementById('membership-dialog')?.showModal();
+                }}
+              >
                 Membership
-              </button>
+              </Link>
             </div>
           </div>
         )}

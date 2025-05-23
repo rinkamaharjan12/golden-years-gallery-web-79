@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -9,7 +8,7 @@ const Index = () => {
     { name: "Rakesh Adhikari", position: "President", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" },
     { name: "Nabin Thapa", position: "Vice President", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face" },
     { name: "Deepak Shrestha", position: "Secretary", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" },
-    { name: "Sumitra Pokharel", position: "Treasurer", image: "https://images.unsplash.com/photo-1494790108755-2616c9d0b3b3?w=150&h=150&fit=crop&crop=face" },
+    { name: "Bishal", position: "Treasurer", image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=150&h=150&fit=crop&crop=face" },
   ];
 
   const currentEvents = [
@@ -172,7 +171,7 @@ const Index = () => {
             {boardMembers.map((member, index) => (
               <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow duration-300">
                 <CardContent className="pt-6">
-                  <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                  <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-primary">
                     <img 
                       src={member.image} 
                       alt={member.name}
