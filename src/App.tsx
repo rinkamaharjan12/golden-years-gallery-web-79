@@ -13,6 +13,7 @@ import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import MembershipPage from "./pages/MembershipPage";
+import SubmitPhotos from "./pages/SubmitPhotos";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => (
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/membership" element={<MembershipPage />} />
+              <Route path="/submit-photos" element={<SubmitPhotos />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

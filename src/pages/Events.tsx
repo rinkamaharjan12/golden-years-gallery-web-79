@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, MapPin, Users } from "lucide-react";
@@ -204,21 +203,16 @@ const Events = () => {
         </div>
       </section>
 
-      {/* Call to Action */}
+      {/* Call to Action - Modified */}
       <section className="py-16 bg-primary text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold mb-6">Stay Connected</h2>
           <p className="text-xl leading-relaxed mb-8">
             Don't miss out on any of our events and activities. Join our community and stay informed about all upcoming programs.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="text-lg px-8 py-3">
-              Join Our Newsletter
-            </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-3 border-white text-white hover:bg-white hover:text-primary">
-              Contact Us
-            </Button>
-          </div>
+          <Button size="lg" variant="secondary" className="text-lg px-8 py-3">
+            Join Our Newsletter
+          </Button>
         </div>
       </section>
     </div>
