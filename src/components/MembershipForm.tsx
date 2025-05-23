@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -36,7 +35,7 @@ const MembershipForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success("Membership application submitted successfully!");
-    document.getElementById('membership-dialog')?.close();
+    (document.getElementById('membership-dialog') as HTMLDialogElement)?.close();
   };
 
   const handleReset = () => {

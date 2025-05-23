@@ -42,7 +42,7 @@ const Footer = () => {
                   className="text-gray-300 hover:text-white text-lg transition-colors"
                   onClick={(e) => {
                     e.preventDefault();
-                    document.getElementById('membership-dialog')?.showModal();
+                    (document.getElementById('membership-dialog') as HTMLDialogElement)?.showModal();
                   }}
                 >
                   Membership

@@ -56,7 +56,7 @@ const Navigation = () => {
               className="px-6 py-2 bg-white text-[#0a192f] rounded-full text-lg font-medium hover:bg-gray-200 transition-colors duration-200 ml-4"
               onClick={(e) => {
                 e.preventDefault();
-                document.getElementById('membership-dialog')?.showModal();
+                (document.getElementById('membership-dialog') as HTMLDialogElement)?.showModal();
               }}
             >
               Membership
@@ -98,7 +98,7 @@ const Navigation = () => {
                 onClick={(e) => {
                   e.preventDefault();
                   setIsMenuOpen(false);
-                  document.getElementById('membership-dialog')?.showModal();
+                  (document.getElementById('membership-dialog') as HTMLDialogElement)?.showModal();
                 }}
               >
                 Membership

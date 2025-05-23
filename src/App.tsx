@@ -43,7 +43,7 @@ const App = () => (
           >
             <div className="flex justify-end">
               <button 
-                onClick={() => document.getElementById('membership-dialog')?.close()}
+                onClick={() => (document.getElementById('membership-dialog') as HTMLDialogElement)?.close()}
                 className="p-2 hover:bg-gray-100 rounded-full"
               >
                 &times;
