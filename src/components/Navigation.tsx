@@ -18,22 +18,26 @@ const Navigation = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
+    <nav className="bg-gray-900 shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 rest-gradient rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg">R</span>
+            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+              <img 
+                src="/lovable-uploads/262f59f7-1be5-473f-a93b-d8236ff474b9.png" 
+                alt="R.E.S.T Logo" 
+                className="w-10 h-10 object-contain"
+              />
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-gray-900">R.E.S.T</h1>
-              <p className="text-sm text-gray-600">Central Office</p>
+              <h1 className="text-2xl font-bold text-white">R.E.S.T</h1>
+              <p className="text-sm text-gray-300">Central Office</p>
             </div>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-6 items-center">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -41,19 +45,22 @@ const Navigation = () => {
                 className={`px-4 py-2 rounded-lg text-lg font-medium transition-colors duration-200 ${
                   isActive(item.path)
                     ? "bg-primary text-white"
-                    : "text-gray-700 hover:bg-primary hover:text-white"
+                    : "text-gray-300 hover:bg-gray-700 hover:text-white"
                 }`}
               >
                 {item.name}
               </Link>
             ))}
+            <button className="px-6 py-2 bg-primary text-white rounded-lg text-lg font-medium hover:bg-primary/80 transition-colors duration-200 ml-4">
+              Membership
+            </button>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-primary focus:outline-none focus:text-primary p-2"
+              className="text-gray-300 hover:text-white focus:outline-none focus:text-white p-2"
             >
               {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -72,12 +79,15 @@ const Navigation = () => {
                   className={`px-4 py-3 rounded-lg text-lg font-medium transition-colors duration-200 ${
                     isActive(item.path)
                       ? "bg-primary text-white"
-                      : "text-gray-700 hover:bg-gray-100"
+                      : "text-gray-300 hover:bg-gray-700 hover:text-white"
                   }`}
                 >
                   {item.name}
                 </Link>
               ))}
+              <button className="px-4 py-3 bg-primary text-white rounded-lg text-lg font-medium hover:bg-primary/80 transition-colors duration-200 mt-2 text-left">
+                Membership
+              </button>
             </div>
           </div>
         )}

@@ -9,8 +9,12 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-12 h-12 rest-gradient rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">R</span>
+              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                <img 
+                  src="/lovable-uploads/262f59f7-1be5-473f-a93b-d8236ff474b9.png" 
+                  alt="R.E.S.T Logo" 
+                  className="w-10 h-10 object-contain"
+                />
               </div>
               <div>
                 <h3 className="text-2xl font-bold">R.E.S.T</h3>
@@ -18,7 +22,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-gray-300 text-lg leading-relaxed mb-4">
-              Deoneshwar Bhawan, Shashtwati Pada, Kathmandu, Nepal
+              Doorsanchar Bhawan, Bhadrakali Plaza, Kathmandu, Nepal
             </p>
             <p className="text-gray-400">
               © 2024 Nepal Telecom. All Rights Reserved.

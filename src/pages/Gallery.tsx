@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -104,6 +103,14 @@ const Gallery = () => {
       category: "cultural",
       date: "April 2023",
       description: "Nepali New Year celebration with traditional festivities and community bonding."
+    },
+    {
+      id: 13,
+      src: "https://images.unsplash.com/photo-1621570734925-b8b37ea5c318?w=800&h=600&fit=crop",
+      title: "Treasure Collection",
+      category: "ceremonies",
+      date: "March 2023",
+      description: "Member Bishal with our precious community treasure and artifacts."
     }
   ];
 
