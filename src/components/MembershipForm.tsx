@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -68,7 +67,7 @@ const MembershipForm = () => {
         <img 
           src="/lovable-uploads/8b09d9e1-7de8-4b1d-85cf-6ac72229eb95.png" 
           alt="R.E.S.T Logo" 
-          className="w-24 h-24 mx-auto mb-4"
+          className="w-24 h-24 mx-auto mb-4 object-contain"
         />
         
         <div className="mb-6">
