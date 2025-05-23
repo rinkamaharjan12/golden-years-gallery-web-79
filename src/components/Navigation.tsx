@@ -31,7 +31,6 @@ const Navigation = () => {
               />
               <div>
                 <h1 className="text-2xl font-bold text-white">R.E.S.T</h1>
-                <p className="text-sm text-gray-300">Central Office</p>
               </div>
             </Link>
           </div>

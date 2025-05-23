@@ -53,15 +53,15 @@ const Footer = () => {
             <h4 className="text-xl font-semibold mb-4">Contact Info</h4>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Phone size={20} className="text-primary" />
+                <Phone size={20} className="text-white" />
                 <span className="text-gray-300 text-lg">+977-1-4271711</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail size={20} className="text-primary" />
+                <Mail size={20} className="text-white" />
                 <span className="text-gray-300 text-lg">info@rest.org.np</span>
               </div>
               <div className="flex items-start space-x-3">
-                <MapPin size={20} className="text-primary mt-1" />
+                <MapPin size={20} className="text-white mt-1" />
                 <span className="text-gray-300 text-lg">Kathmandu, Nepal</span>
               </div>
             </div>
