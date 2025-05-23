@@ -1,17 +1,56 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Lightbulb, Target, Award, Users, Building, Heart } from "lucide-react";
 
 const About = () => {
   const boardMembers = [
-    { name: "Rakesh Adhikari", position: "President", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" },
-    { name: "Nabin Thapa", position: "Vice President", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face" },
-    { name: "Deepak Shrestha", position: "Secretary", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" },
-    { name: "Sumitra Pokharel", position: "Treasurer", image: "https://images.unsplash.com/photo-1494790108755-2616c9d0b3b3?w=150&h=150&fit=crop&crop=face" },
-    { name: "Rajesh Gurung", position: "Member", image: "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=150&h=150&fit=crop&crop=face" },
-    { name: "Kabita Adhikari", position: "Member", image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face" },
-    { name: "Bishal Magar", position: "Member", image: "https://images.unsplash.com/photo-1566492031773-4f4e44671d66?w=150&h=150&fit=crop&crop=face" },
-    { name: "Rajesh Gurung", position: "Member", image: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=150&h=150&fit=crop&crop=face" },
+    { 
+      name: "Rakesh Adhikari", 
+      position: "President", 
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+      bio: "25+ years in telecommunications with expertise in network infrastructure and management."
+    },
+    { 
+      name: "Nabin Thapa", 
+      position: "Vice President", 
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+      bio: "Former regional director with extensive experience in telecommunications policy."
+    },
+    { 
+      name: "Deepak Shrestha", 
+      position: "Secretary", 
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      bio: "20 years experience in administrative management and organizational leadership."
+    },
+    { 
+      name: "Sumitra Pokharel", 
+      position: "Treasurer", 
+      image: "https://images.unsplash.com/photo-1494790108755-2616c9d0b3b3?w=150&h=150&fit=crop&crop=face",
+      bio: "Financial management specialist with background in telecommunications budgeting."
+    },
+    { 
+      name: "Rajesh Gurung", 
+      position: "Member", 
+      image: "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=150&h=150&fit=crop&crop=face",
+      bio: "Technical specialist with expertise in network infrastructure design and implementation."
+    },
+    { 
+      name: "Kabita Adhikari", 
+      position: "Member", 
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+      bio: "Communications specialist with focus on community engagement and outreach programs."
+    },
+    { 
+      name: "Bishal Magar", 
+      position: "Member", 
+      image: "https://images.unsplash.com/photo-1566492031773-4f4e44671d66?w=150&h=150&fit=crop&crop=face",
+      bio: "Former operations manager with expertise in organizational development and project management."
+    },
+    { 
+      name: "Hari Gurung", 
+      position: "Member", 
+      image: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=150&h=150&fit=crop&crop=face",
+      bio: "Human resources expert specializing in retiree affairs and welfare programs."
+    },
   ];
 
   return (
@@ -141,23 +180,28 @@ const About = () => {
         </div>
       </section>
 
-      {/* Board Members */}
+      {/* Board Members - Updated to match home page style */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">Our Board Members</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {boardMembers.map((member, index) => (
-              <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow duration-300">
-                <CardContent className="pt-6">
-                  <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
-                    <img 
-                      src={member.image} 
-                      alt={member.name}
-                      className="w-full h-full object-cover"
-                    />
+              <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div className="h-64 relative">
+                  <img 
+                    src={member.image} 
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                    <div className="p-4 text-white">
+                      <h3 className="text-xl font-bold mb-1">{member.name}</h3>
+                      <p className="text-gray-200">{member.position}</p>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
-                  <p className="text-lg text-gray-600">{member.position}</p>
+                </div>
+                <CardContent className="p-4">
+                  <p className="text-gray-700 text-sm">{member.bio}</p>
                 </CardContent>
               </Card>
             ))}

@@ -7,6 +7,16 @@
   background-size: cover;
 }
 
+/* Ensure images remain colorful */
+img {
+  filter: none;
+}
+
+/* Apply grayscale to background elements if needed */
+.grayscale-bg {
+  filter: grayscale(100%);
+}
+
 @media (max-width: 768px) {
   .hero-image {
     background-attachment: scroll;
