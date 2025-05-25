@@ -18,6 +18,7 @@ import EventRegistration from "./pages/EventRegistration";
 import CurrentDiscussion from "./pages/CurrentDiscussion";
 import SubmitFeedback from "./pages/SubmitFeedback";
 import RecentEvents from "./pages/RecentEvents";
+import JointDiscussion from "./pages/JointDiscussion";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,7 @@ const App = () => (
               <Route path="/events" element={<Events />} />
               <Route path="/event-registration" element={<EventRegistration />} />
               <Route path="/current-discussion" element={<CurrentDiscussion />} />
+              <Route path="/joint-discussion" element={<JointDiscussion />} />
               <Route path="/submit-feedback" element={<SubmitFeedback />} />
               <Route path="/recent-events" element={<RecentEvents />} />
               <Route path="/gallery" element={<Gallery />} />

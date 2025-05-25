@@ -6,7 +6,7 @@ import { MessageSquare, Clock, Users } from "lucide-react";
 import { Link, useSearchParams } from "react-router-dom";
 
 const CurrentDiscussion = () => {
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const issueId = searchParams.get('issueId');
 
   const allIssues = [
@@ -67,6 +67,10 @@ const CurrentDiscussion = () => {
     }
   };
 
+  const handleDiscussionClick = (discussionId: number) => {
+    setSearchParams({ issueId: discussionId.toString() });
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
@@ -84,7 +88,14 @@ const CurrentDiscussion = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Discussion List */}
           <div className="lg:col-span-1">
-            <h2 className="text-2xl font-bold mb-6">All Discussions</h2>
+            <div className="flex justify-between items-center mb-6">
+              <h2 className="text-2xl font-bold">All Discussions</h2>
+              <Link to="/joint-discussion">
+                <Button variant="outline" size="sm">
+                  Joint Discussions
+                </Button>
+              </Link>
+            </div>
             <div className="space-y-4">
               {allIssues.map((issue) => (
                 <Card 
@@ -92,6 +103,7 @@ const CurrentDiscussion = () => {
                   className={`cursor-pointer transition-shadow hover:shadow-md ${
                     currentIssue?.id === issue.id ? 'ring-2 ring-primary' : ''
                   }`}
+                  onClick={() => handleDiscussionClick(issue.id)}
                 >
                   <CardContent className="p-4">
                     <div className="flex justify-between items-start mb-2">
@@ -151,11 +163,13 @@ const CurrentDiscussion = () => {
                         <span>Last activity: {currentIssue.lastActivity}</span>
                       </div>
                     </div>
-                    <div className="space-x-3">
-                      <Button variant="outline">
-                        <MessageSquare className="w-4 h-4 mr-2" />
-                        Join Discussion
-                      </Button>
+                    <div className="flex space-x-4">
+                      <Link to="/joint-discussion">
+                        <Button variant="outline">
+                          <MessageSquare className="w-4 h-4 mr-2" />
+                          Joint Discussion
+                        </Button>
+                      </Link>
                       <Link to="/submit-feedback">
                         <Button>Share Your Thoughts</Button>
                       </Link>
