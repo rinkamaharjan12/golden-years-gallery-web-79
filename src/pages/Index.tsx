@@ -2,62 +2,57 @@ import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Lightbulb, Target, Award, Calendar, Users, ArrowRight } from "lucide-react";
-
 const Index = () => {
-  const boardMembers = [
-    { 
-      name: "Rakesh Adhikari", 
-      position: "President", 
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-      bio: "25+ years in telecommunications with expertise in network infrastructure and management."
-    },
-    { 
-      name: "Nabin Thapa", 
-      position: "Vice President", 
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
-      bio: "Former regional director with extensive experience in telecommunications policy."
-    },
-    { 
-      name: "Deepak Shrestha", 
-      position: "Secretary", 
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
-      bio: "20 years experience in administrative management and organizational leadership."
-    },
-    { 
-      name: "Bishal", 
-      position: "Treasurer", 
-      image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=150&h=150&fit=crop&crop=face",
-      bio: "Financial management specialist with background in telecommunications budgeting."
-    },
-  ];
-
-  const currentEvents = [
-    { title: "Current Issues", description: "Event requires discussion and we will discuss upon voluntary decision.", date: "Ongoing" },
-    { title: "Introductory", description: "Event requires discussion and we will discuss upon voluntary decision.", date: "Monthly" },
-    { title: "Press release", description: "Event requires discussion and we will discuss upon voluntary decision.", date: "As needed" },
-  ];
+  const boardMembers = [{
+    name: "Rakesh Adhikari",
+    position: "President",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    bio: "25+ years in telecommunications with expertise in network infrastructure and management."
+  }, {
+    name: "Nabin Thapa",
+    position: "Vice President",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+    bio: "Former regional director with extensive experience in telecommunications policy."
+  }, {
+    name: "Deepak Shrestha",
+    position: "Secretary",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+    bio: "20 years experience in administrative management and organizational leadership."
+  }, {
+    name: "Bishal",
+    position: "Treasurer",
+    image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=150&h=150&fit=crop&crop=face",
+    bio: "Financial management specialist with background in telecommunications budgeting."
+  }];
+  const currentEvents = [{
+    title: "Current Issues",
+    description: "Event requires discussion and we will discuss upon voluntary decision.",
+    date: "Ongoing"
+  }, {
+    title: "Introductory",
+    description: "Event requires discussion and we will discuss upon voluntary decision.",
+    date: "Monthly"
+  }, {
+    title: "Press release",
+    description: "Event requires discussion and we will discuss upon voluntary decision.",
+    date: "As needed"
+  }];
 
   // Add activities with images
-  const activities = [
-    {
-      title: "Yoga Sessions",
-      description: "Regular yoga classes tailored for retirees to maintain flexibility and wellness.",
-      image: "https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?w=600&h=400&fit=crop"
-    },
-    {
-      title: "Meditation Retreats",
-      description: "Peaceful meditation gatherings to promote mental well-being and mindfulness.",
-      image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=400&fit=crop"
-    },
-    {
-      title: "Treasure Collection",
-      description: "Exhibition of rare telecommunications equipment and memorabilia from our members.",
-      image: "https://images.unsplash.com/photo-1534671671412-f78b7c125f13?w=600&h=400&fit=crop"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen">
+  const activities = [{
+    title: "Yoga Sessions",
+    description: "Regular yoga classes tailored for retirees to maintain flexibility and wellness.",
+    image: "https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?w=600&h=400&fit=crop"
+  }, {
+    title: "Meditation Retreats",
+    description: "Peaceful meditation gatherings to promote mental well-being and mindfulness.",
+    image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=400&fit=crop"
+  }, {
+    title: "Treasure Collection",
+    description: "Exhibition of rare telecommunications equipment and memorabilia from our members.",
+    image: "https://images.unsplash.com/photo-1534671671412-f78b7c125f13?w=600&h=400&fit=crop"
+  }];
+  return <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-96 bg-gradient-to-r from-blue-900 to-blue-600 flex items-center justify-center text-white">
         <div className="absolute inset-0 hero-overlay"></div>
@@ -74,7 +69,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">About Our Community</h2>
-            <p className="text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto">
+            <p className="text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto text-justify">
               R.E.S.T is a vibrant community dedicated to supporting retired telecommunications professionals. 
               We provide a platform for continued connection, shared experiences, and mutual support among our members. 
               Our organization has been serving the telecommunications community for years, fostering relationships 
@@ -145,21 +140,15 @@ const Index = () => {
             <p className="text-xl text-gray-700 mb-8">Engaging opportunities for all our members</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {activities.map((activity, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+            {activities.map((activity, index) => <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
                 <div className="h-48 overflow-hidden">
-                  <img 
-                    src={activity.image} 
-                    alt={activity.title} 
-                    className="w-full h-full object-cover"
-                  />
+                  <img src={activity.image} alt={activity.title} className="w-full h-full object-cover" />
                 </div>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{activity.title}</h3>
                   <p className="text-gray-700">{activity.description}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -171,8 +160,7 @@ const Index = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Current Events</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            {currentEvents.map((event, index) => (
-              <Card key={index} className="p-6 hover:shadow-lg transition-shadow duration-300">
+            {currentEvents.map((event, index) => <Card key={index} className="p-6 hover:shadow-lg transition-shadow duration-300">
                 <CardContent className="pt-0">
                   <div className="flex items-start space-x-3 mb-4">
                     <Calendar className="w-6 h-6 text-primary mt-1" />
@@ -181,8 +169,7 @@ const Index = () => {
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{event.title}</h3>
                   <p className="text-lg text-gray-700">{event.description}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
           <div className="text-center">
             <Link to="/events">
@@ -204,18 +191,10 @@ const Index = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             <div className="rounded-lg overflow-hidden shadow-lg">
-              <img 
-                src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&h=400&fit=crop" 
-                alt="Community gathering" 
-                className="w-full h-64 object-cover"
-              />
+              <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&h=400&fit=crop" alt="Community gathering" className="w-full h-64 object-cover" />
             </div>
             <div className="rounded-lg overflow-hidden shadow-lg">
-              <img 
-                src="https://images.unsplash.com/photo-1559523161-0fc0d8b38a7a?w=600&h=400&fit=crop" 
-                alt="Members meeting" 
-                className="w-full h-64 object-cover"
-              />
+              <img src="https://images.unsplash.com/photo-1559523161-0fc0d8b38a7a?w=600&h=400&fit=crop" alt="Members meeting" className="w-full h-64 object-cover" />
             </div>
           </div>
           <div className="text-center">
@@ -234,14 +213,9 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">Our Board Members</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {boardMembers.map((member, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            {boardMembers.map((member, index) => <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                 <div className="h-64 relative">
-                  <img 
-                    src={member.image} 
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                  />
+                  <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
                     <div className="p-4 text-white">
                       <h3 className="text-xl font-bold mb-1">{member.name}</h3>
@@ -252,8 +226,7 @@ const Index = () => {
                 <CardContent className="p-4">
                   <p className="text-gray-700 text-sm">{member.bio}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
           <div className="text-center mt-8">
             <Link to="/about">
@@ -297,11 +270,7 @@ const Index = () => {
               <Card className="p-6 text-center">
                 <CardContent className="pt-6">
                   <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
-                    <img 
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face" 
-                      alt="Rakesh Adhikari"
-                      className="w-full h-full object-cover"
-                    />
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face" alt="Rakesh Adhikari" className="w-full h-full object-cover" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900">Rakesh Adhikari</h3>
                   <p className="text-lg text-gray-600">President</p>
@@ -311,8 +280,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
