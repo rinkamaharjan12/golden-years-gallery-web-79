@@ -116,9 +116,7 @@ const CurrentDiscussion = () => {
                     <div>
                       <h1 className="text-3xl font-bold mb-2">{currentIssue.title}</h1>
                       <div className="flex items-center space-x-4 text-gray-600">
-                        <Badge className={getPriorityColor(currentIssue.priority)}>
-                          {currentIssue.priority} Priority
-                        </Badge>
+                        
                         <span className="text-sm">Status: {currentIssue.status}</span>
                       </div>
                     </div>
