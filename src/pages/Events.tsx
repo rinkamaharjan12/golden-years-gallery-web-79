@@ -141,9 +141,7 @@ const Events = () => {
                 <CardContent className="p-6">
                   <div className="flex justify-between items-start mb-4">
                     <h3 className="text-xl font-bold text-gray-900">{issue.title}</h3>
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${getPriorityColor(issue.priority)}`}>
-                      {issue.priority}
-                    </span>
+                    
                   </div>
                   <p className="text-gray-700 text-lg leading-relaxed mb-4">{issue.description}</p>
                   <div className="flex justify-between items-center">
