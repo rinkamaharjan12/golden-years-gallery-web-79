@@ -1,8 +1,7 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { MessageSquare, Clock, Users } from "lucide-react";
+import { Clock, Users } from "lucide-react";
 import { Link, useSearchParams } from "react-router-dom";
 
 const CurrentDiscussion = () => {
@@ -163,13 +162,7 @@ const CurrentDiscussion = () => {
                         <span>Last activity: {currentIssue.lastActivity}</span>
                       </div>
                     </div>
-                    <div className="flex space-x-4">
-                      <Link to="/joint-discussion">
-                        <Button variant="outline">
-                          <MessageSquare className="w-4 h-4 mr-2" />
-                          Joint Discussion
-                        </Button>
-                      </Link>
+                    <div className="flex justify-end">
                       <Link to="/submit-feedback">
                         <Button>Share Your Thoughts</Button>
                       </Link>

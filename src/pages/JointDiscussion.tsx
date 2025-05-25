@@ -1,8 +1,7 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { MessageSquare, Clock, Users, ArrowLeft } from "lucide-react";
+import { Clock, Users, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const JointDiscussion = () => {
@@ -134,12 +133,8 @@ const JointDiscussion = () => {
                     </div>
                   </div>
                   
-                  <div className="flex space-x-3">
-                    <Button className="flex-1">
-                      <MessageSquare className="w-4 h-4 mr-2" />
-                      Join Discussion
-                    </Button>
-                    <Link to="/submit-feedback" className="flex-1">
+                  <div className="flex justify-center">
+                    <Link to="/submit-feedback" className="w-full">
                       <Button variant="outline" className="w-full">
                         Share Thoughts
                       </Button>
