@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, MapPin, Users } from "lucide-react";
 import { Link } from "react-router-dom";
+
 const Events = () => {
   const upcomingEvents = [{
     id: 1,
@@ -146,9 +147,11 @@ const Events = () => {
                   <p className="text-gray-700 text-lg leading-relaxed mb-4">{issue.description}</p>
                   <div className="flex justify-between items-center">
                     <span className="text-primary font-medium">Status: {issue.status}</span>
-                    <Button variant="outline" className="text-primary border-primary hover:bg-primary hover:text-white">
-                      Learn More
-                    </Button>
+                    <Link to={`/current-discussion?issueId=${index + 1}`}>
+                      <Button variant="outline" className="text-primary border-primary hover:bg-primary hover:text-white">
+                        Learn More
+                      </Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>)}
@@ -157,9 +160,11 @@ const Events = () => {
             <p className="text-xl text-gray-700 mb-6">
               Have suggestions or concerns? We value your input!
             </p>
-            <Button className="text-lg px-8 py-3 bg-primary hover:bg-primary/90">
-              Submit Feedback
-            </Button>
+            <Link to="/submit-feedback">
+              <Button className="text-lg px-8 py-3 bg-primary hover:bg-primary/90">
+                Submit Feedback
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -167,7 +172,14 @@ const Events = () => {
       {/* Recent Events */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Recent Events</h2>
+          <div className="flex justify-between items-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900">Recent Events</h2>
+            <Link to="/recent-events">
+              <Button variant="outline" className="text-primary border-primary hover:bg-primary hover:text-white">
+                View All Events
+              </Button>
+            </Link>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {recentEvents.map((event, index) => <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
                 <CardContent className="p-6">
@@ -197,4 +209,5 @@ const Events = () => {
       </section>
     </div>;
 };
+
 export default Events;
