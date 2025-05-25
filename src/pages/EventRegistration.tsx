@@ -193,7 +193,7 @@ const EventRegistration = () => {
                 </div>
 
                 <div className="flex items-center space-x-2">
-                  <Checkbox id="agreeToTerms" checked={formData.agreeToTerms} onCheckedChange={handleCheckboxChange} />
+                  
                   
                 </div>
 
