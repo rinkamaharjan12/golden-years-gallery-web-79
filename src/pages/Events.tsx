@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, MapPin, Users } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Events = () => {
   const upcomingEvents = [
@@ -136,9 +137,11 @@ const Events = () => {
                     </div>
                   </div>
                   
-                  <Button className="w-full text-lg bg-primary hover:bg-primary/90 mt-auto">
-                    Register Now
-                  </Button>
+                  <Link to={`/event-registration?eventId=${event.id}`} className="mt-auto">
+                    <Button className="w-full text-lg bg-primary hover:bg-primary/90">
+                      Register Now
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}

@@ -14,6 +14,7 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import MembershipPage from "./pages/MembershipPage";
 import SubmitPhotos from "./pages/SubmitPhotos";
+import EventRegistration from "./pages/EventRegistration";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
               <Route path="/" element={<Index />} />
               <Route path="/about" element={<About />} />
               <Route path="/events" element={<Events />} />
+              <Route path="/event-registration" element={<EventRegistration />} />
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/membership" element={<MembershipPage />} />
