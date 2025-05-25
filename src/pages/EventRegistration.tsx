@@ -192,10 +192,7 @@ const EventRegistration = () => {
                   <Textarea id="specialNeeds" name="specialNeeds" value={formData.specialNeeds} onChange={handleInputChange} placeholder="Please describe any special accommodations needed" rows={3} />
                 </div>
 
-                <div className="flex items-center space-x-2">
-                  <Checkbox id="agreeToTerms" checked={formData.agreeToTerms} onCheckedChange={handleCheckboxChange} />
-                  
-                </div>
+                
 
                 <div className="flex space-x-4">
                   <Button type="button" variant="outline" onClick={() => navigate("/events")} className="flex-1">
