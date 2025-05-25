@@ -112,10 +112,10 @@ const Events = () => {
           <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Upcoming Events</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {upcomingEvents.map((event) => (
-              <Card key={event.id} className="hover:shadow-lg transition-shadow duration-300">
-                <CardContent className="p-6">
+              <Card key={event.id} className="hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
+                <CardContent className="p-6 flex flex-col h-full">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{event.title}</h3>
-                  <p className="text-gray-700 text-lg leading-relaxed mb-6">{event.description}</p>
+                  <p className="text-gray-700 text-lg leading-relaxed mb-6 flex-grow">{event.description}</p>
                   
                   <div className="space-y-3 mb-6">
                     <div className="flex items-center space-x-3">
@@ -136,7 +136,7 @@ const Events = () => {
                     </div>
                   </div>
                   
-                  <Button className="w-full text-lg bg-primary hover:bg-primary/90">
+                  <Button className="w-full text-lg bg-primary hover:bg-primary/90 mt-auto">
                     Register Now
                   </Button>
                 </CardContent>
